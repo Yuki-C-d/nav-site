@@ -13,103 +13,74 @@
     --muted: #8b949e;
     --accent: #58a6ff;
     --accent2: #f78166;
-    --accent3: #3fb950;
-    --tag-bg: #1c2128;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
     background: var(--bg);
     color: var(--text);
-    max-width: 960px;
+    max-width: 640px;
     margin: 0 auto;
-    padding: 40px 20px 80px;
+    padding: 60px 20px 80px;
   }
   header {
     text-align: center;
-    padding: 40px 0;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 40px;
+    padding: 20px 0 40px;
   }
-  header h1 {
-    font-size: 28px;
-    letter-spacing: 2px;
-  }
+  header h1 { font-size: 24px; letter-spacing: 3px; }
   header h1 span { color: var(--accent); }
-  header p {
-    color: var(--muted);
-    margin-top: 8px;
-    font-size: 14px;
-  }
-  .category {
-    margin-bottom: 36px;
-  }
-  .category-title {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--muted);
-    margin-bottom: 12px;
-    padding-left: 4px;
-  }
+  header p { color: var(--muted); margin-top: 6px; font-size: 13px; }
   .links {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
   .links a {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 14px 16px;
+    padding: 16px 18px;
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     color: var(--text);
     transition: border-color 0.2s, transform 0.15s;
   }
   .links a:hover {
     border-color: var(--accent);
-    transform: translateY(-1px);
+    transform: translateX(4px);
   }
   .links .icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 6px;
+    width: 36px; height: 36px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 16px;
     flex-shrink: 0;
   }
-  .links .info {
-    min-width: 0;
-  }
+  .links .info { min-width: 0; }
   .links .title {
-    font-size: 14px;
-    line-height: 1.3;
+    font-size: 15px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
   .links .domain {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--muted);
     margin-top: 2px;
   }
   .tag-工具 { background: #1a2332; color: #58a6ff; }
   .tag-动漫 { background: #2a1a1a; color: #f78166; }
-  .tag-其他 { background: #1a2a1a; color: #3fb950; }
-  .tag-集锦 { background: #2a1a2a; color: #d2a8ff; }
+  .tag-AI  { background: #1a2a1a; color: #3fb950; }
+  .tag-归档 { background: #2a1a2a; color: #d2a8ff; }
   .footer {
     text-align: center;
     color: var(--muted);
     font-size: 12px;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
+    margin-top: 50px;
   }
 </style>
 </head>
@@ -117,99 +88,49 @@
 
 <header>
   <h1>fake-<span>star</span> ✦</h1>
-  <p>我常用的网站 · 共 7 个链接</p>
+  <p>我的集锦归档</p>
 </header>
 
 <main>
+  <div class="links">
 
-  <!-- ========== 工具 ========== -->
-  <div class="category">
-    <div class="category-title">🔧 Lenovo</div>
-    <div class="links">
-      <a href="http://support.lenovo.com.cn/" target="_blank" rel="noopener">
-        <div class="icon tag-工具">💻</div>
-        <div class="info">
-          <div class="title">Lenovo Support</div>
-          <div class="domain">support.lenovo.com.cn</div>
-        </div>
-      </a>
-      <a href="http://www.lenovo.com.cn/" target="_blank" rel="noopener">
-        <div class="icon tag-工具">🏢</div>
-        <div class="info">
-          <div class="title">Lenovo 官网</div>
-          <div class="domain">lenovo.com.cn</div>
-        </div>
-      </a>
-    </div>
+    <a href="https://dongmanhuayuan.myheartsite.com/" target="_blank" rel="noopener">
+      <div class="icon tag-动漫">🌸</div>
+      <div class="info">
+        <div class="title">动漫花园资源网</div>
+        <div class="domain">dongmanhuayuan.myheartsite.com</div>
+      </div>
+    </a>
+
+    <a href="https://www.aowu.tv/" target="_blank" rel="noopener">
+      <div class="icon tag-动漫">🎥</div>
+      <div class="info">
+        <div class="title">嗷呜动漫</div>
+        <div class="domain">aowu.tv</div>
+      </div>
+    </a>
+
+    <a href="https://chub.ai/" target="_blank" rel="noopener">
+      <div class="icon tag-AI">🤖</div>
+      <div class="info">
+        <div class="title">Chub.ai — 角色卡社区</div>
+        <div class="domain">chub.ai</div>
+      </div>
+    </a>
+
+    <a href="https://convertio.co/" target="_blank" rel="noopener">
+      <div class="icon tag-工具">🔄</div>
+      <div class="info">
+        <div class="title">Convertio — 在线文件转换</div>
+        <div class="domain">convertio.co</div>
+      </div>
+    </a>
+
   </div>
-
-  <!-- ========== 工具 ========== -->
-  <div class="category">
-    <div class="category-title">🛠️ 文件 & 下载</div>
-    <div class="links">
-      <a href="https://convertio.co/" target="_blank" rel="noopener">
-        <div class="icon tag-工具">🔄</div>
-        <div class="info">
-          <div class="title">Convertio — 在线文件转换</div>
-          <div class="domain">convertio.co</div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- ========== 动漫 ========== -->
-  <div class="category">
-    <div class="category-title">🎬 动漫</div>
-    <div class="links">
-      <a href="https://dongmanhuayuan.myheartsite.com/" target="_blank" rel="noopener">
-        <div class="icon tag-动漫">🌸</div>
-        <div class="info">
-          <div class="title">动漫花园资源网</div>
-          <div class="domain">dongmanhuayuan.myheartsite.com</div>
-        </div>
-      </a>
-      <a href="https://www.aowu.tv/" target="_blank" rel="noopener">
-        <div class="icon tag-动漫">🎥</div>
-        <div class="info">
-          <div class="title">嗷呜动漫</div>
-          <div class="domain">aowu.tv</div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- ========== AI & 社区 ========== -->
-  <div class="category">
-    <div class="category-title">🤖 AI & 社区</div>
-    <div class="links">
-      <a href="https://chub.ai/" target="_blank" rel="noopener">
-        <div class="icon tag-其他">🤖</div>
-        <div class="info">
-          <div class="title">Chub.ai — 角色卡社区</div>
-          <div class="domain">chub.ai</div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <!-- ========== 集锦备份 ========== -->
-  <div class="category">
-    <div class="category-title">📌 集锦备份</div>
-    <div class="links">
-      <a href="https://cn.bing.com/saves" target="_blank" rel="noopener">
-        <div class="icon tag-集锦">📑</div>
-        <div class="info">
-          <div class="title">Bing 集锦归档</div>
-          <div class="domain">cn.bing.com/saves</div>
-        </div>
-      </a>
-    </div>
-  </div>
-
 </main>
 
 <footer class="footer">
-  fake-star.xyz · 从此方的 Edge 集锦导出 · 2026-07-11
+  fake-star.xyz · 2026
 </footer>
 
 </body>
